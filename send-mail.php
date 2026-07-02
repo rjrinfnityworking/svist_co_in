@@ -12,7 +12,7 @@ if (empty($name) || empty($phone) || empty($course)) {
     die("Please fill all required fields.");
 }
 
-$to = "admin@busketbell.com";
+$to = "arindam.paul@svist.co.in";
 
 if ($formType == "application") {
 
