@@ -1,4 +1,4 @@
-```dockerfile
+
 FROM php:8.3-apache
 
 # Enable Apache rewrite module
@@ -32,4 +32,3 @@ ENV APACHE_DOCUMENT_ROOT=/var/www/html
 EXPOSE 80
 
 CMD ["apache2-foreground"]
-```
