@@ -79,66 +79,13 @@ session_start();
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
 
 
-    <!-- Top Bar -->
-    <div class="bg-secondary text-white hidden lg:block">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div class="flex items-center justify-between h-12">
-
-                <!-- Contact -->
-                <div class="flex items-center gap-6 text-sm">
-
-                    <a href="tel:+918910367916" class="flex items-center gap-2 hover:text-accentLight transition">
-                        <i class="ri-phone-fill text-accent"></i>
-                        <span>+91 89103 67916</span>
-                    </a>
-
-                    <a href="mailto:admissions@svist.org"
-                        class="flex items-center gap-2 hover:text-accentLight transition">
-                        <i class="ri-mail-fill text-accent"></i>
-                        <span>admissions@svist.org</span>
-                    </a>
-
-                </div>
-
-                <!-- Accreditation -->
-                <div class="flex items-center gap-4 text-sm">
-
-                    <div class="flex items-center gap-2">
-                        <i class="ri-award-fill text-accent"></i>
-                        <span>AICTE Approved</span>
-                    </div>
-
-                    <span class="w-px h-4 bg-white/30"></span>
-
-                    <div class="flex items-center gap-2">
-                        <i class="ri-medal-fill text-accent"></i>
-                        <span>NAAC B++</span>
-                    </div>
-
-                    <span class="w-px h-4 bg-white/30"></span>
-
-                    <div class="flex items-center gap-2">
-                        <i class="ri-graduation-cap-fill text-accent"></i>
-                        <span>MAKAUT</span>
-                    </div>
-
-                    <a href="#enquiry"
-                        class="ml-2 bg-primary hover:bg-primaryDark px-4 py-2 rounded-lg font-medium transition">
-                        Apply Now
-                    </a>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Navbar -->
+     <!-- Main Navbar -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
@@ -163,26 +110,32 @@ session_start();
                 <!-- CTA Buttons -->
                 <div class="hidden lg:flex items-center gap-3">
 
-                    <button onclick="openBookingModal()"
+                    <button
                         class="hidden md:flex items-center space-x-3 px-4 py-2 border border-primary/60 hover:border-primaryDark rounded-xl bg-white group transition-all duration-300 select-none cursor-pointer">
                         <!-- Orange Telephone Icon in elegant circle -->
                         <img src="assets/images/icons/phone.svg" class="h-6" alt="">
                         <!-- Numeric/Booking Details -->
-                        <div class="flex flex-col text-left space-y-0.5">
+                        <a href="tel:+917003029267" class="flex flex-col text-left space-y-0.5">
                             <span
-                                class="text-primary font-bold text-[15px] leading-tight tracking-wide group-hover:text-primaryDark transition-colors">1860
-                                500 7788</span>
+                                class="text-primary font-bold text-[15px] leading-tight tracking-wide group-hover:text-primaryDark transition-colors">+91
+                                70030 29267</span>
                             <span class="text-slate-600 font-medium text-[10px] leading-none">Admission
                                 Assistance</span>
-                        </div>
+                        </a>
                     </button>
 
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-toggle" class="lg:hidden text-secondary text-3xl focus:outline-none">
-                    <i class="ri-menu-3-line"></i>
-                </button>
+                <!-- Mobile Controls (WhatsApp + Menu Button) -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <a href="https://wa.me/917003029267" target="_blank" aria-label="WhatsApp" class="flex items-center justify-center hover:scale-110 transition-transform">
+                        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="w-9 h-9 drop-shadow-md">
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-toggle" class="text-secondary text-3xl focus:outline-none">
+                        <i class="ri-menu-3-line"></i>
+                    </button>
+                </div>
 
             </div>
 
@@ -192,8 +145,8 @@ session_start();
 
     <main>
         <!-- Hero Section (LCP Optimized, Creative, SEO Friendly) -->
-        <section id="home"
-            class="relative bg-cover bg-center bg-no-repeat overflow-hidden bg-slate-100 pt-12 md:pt-20 lg:pt-16 pb-0 flex items-stretch">
+         <section id="home"
+            class="relative bg-cover bg-center bg-no-repeat overflow-hidden bg-slate-100 pt-12 md:pt-20 lg:pt-16 pb-0 flex items-stretch animate-fade-in">
             <!-- Decorative Light Accents -->
             <div
                 class="absolute top-0 left-0 w-64 h-64 bg-accentLight/30 rounded-full blur-3xl pointer-events-none select-none">
@@ -203,25 +156,34 @@ session_start();
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 w-full relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-stretch">
+                <div class="grid grid-cols-1 md:grid-cols-12 sm:gap-8 items-stretch">
 
                     <!-- Left: Content Column -->
-                    <div class="lg:col-span-5 text-left flex flex-col justify-center pb-12 md:pb-20 lg:pb-16">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4 text-left flex flex-col justify-center pb-8 md:pb-12 lg:pb-16">
+                        
 
-                        <!-- H1 Title (SEO & Creative) -->
-                        <h1 class="text-2xl sm:text-4xl lg:text-3xl font-bold text-secondary !leading-snug">
-                            Apply for B.Tech Admission 2026 – 2027 at
-                            <span class="text-primary">SVIST</span>
+                        <!-- H1 Title -->
+                        <h1 class="text-2xl sm:text-4xl lg:text-3xl font-extrabold text-secondary !leading-snug">
+                            Get a B.Tech Degree <br class="hidden sm:inline">
+                            That <span class="text-primary relative inline-block">Actually<span class="absolute bottom-1 left-0 w-full h-1.5 bg-primary/25 -z-10 rounded-full"></span></span> Gets You Placed
                         </h1>
+                        <h2 class="text-base sm:text-lg font-bold text-gray-700 mt-2">
+                            Kolkata's Engineering College with a <span class="font-bold text-primary">93%+</span> Placement Record
+                        </h2>
 
-                        <p class="mt-4 text-gray-600 max-w-xl ">
-                            Choose from Computer Science, AI & Data Science, Electronics & Communication, Mechanical,
-                            Civil, and other industry-focused B.Tech programs.
+                        <!-- Sub-headline -->
+                        <p class="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                            Btech Admissions open for CSE, AI &amp; Data Science, ECE, EEE, Mechanical &amp; Civil — Session 2026-27. WBJEE / JEE Main accepted. Scholarships available.
                         </p>
-                        <p class="text-sm font-semibold mt-6">
-                            AICTE Approved <span class="mx-1.5 text-primary">•</span> NAAC B++ Accredited <span
-                                class="mx-1.5 text-primary">•</span> MAKAUT Affiliated
-                        </p>
+
+                        <!-- Accreditation Badges -->
+                        <div class="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-xs text-gray-700 font-semibold uppercase tracking-wider">
+                            <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-primary text-sm"></i> AICTE Approved</span>
+                            <span class="text-gray-300 hidden sm:inline">•</span>
+                            <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-primary text-sm"></i> NAAC B++ Accredited</span>
+                            <span class="text-gray-300 hidden sm:inline">•</span>
+                            <span class="flex items-center gap-1"><i class="ri-checkbox-circle-fill text-primary text-sm"></i> MAKAUT Affiliated</span>
+                        </div>
 
                         <!-- CTA Buttons -->
                         <div class="flex flex-col sm:flex-row sm:items-center gap-4 my-8 ">
@@ -235,68 +197,95 @@ session_start();
                                 View Courses
                             </a>
                         </div>
-
-                        <!-- Trust Badge and Google Reviews -->
-                        <div class="flex flex-wrap items-center gap-6 border-t border-secondary/10 pt-6">
-                            <!-- Student Stack -->
-                            <div class="flex items-center gap-3">
-                                <div class="flex -space-x-3">
-                                    <img src="assets/images/banner/trust-1.png" alt="Student 1"
-                                        class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm"
-                                        width="40" height="40" decoding="async">
-                                    <img src="assets/images/banner/trust-2.png" alt="Student 2"
-                                        class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm"
-                                        width="40" height="40" decoding="async">
-                                    <img src="assets/images/banner/trust-3.png" alt="Student 3"
-                                        class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm"
-                                        width="40" height="40" decoding="async">
-                                </div>
-                                <div class="flex flex-col">
-                                    <span class="text-secondary font-bold text-xs sm:text-sm leading-tight">2,500+
-                                        Students</span>
-                                    <span class="text-gray-500 text-[11px] leading-tight mt-0.5">Enrolled
-                                        Successfully</span>
-                                </div>
-                            </div>
-
-                            <!-- Vertical Divider -->
-                            <div class="hidden sm:block w-px h-8 bg-secondary/15"></div>
-
-                            <!-- Google Rating -->
-                            <div class="flex items-center gap-2">
-                                <img src="assets/images/banner/google.svg" alt="Google reviews rating" class="w-6 h-6"
-                                    width="24" height="24" decoding="async">
-                                <div class="flex flex-col text-left">
-                                    <div class="flex items-center text-amber-500 text-xs gap-0.5">
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                    </div>
-                                    <span class="text-gray-500 text-[11px] font-bold mt-0.5">4.8/5 rating (200+
-                                        reviews)</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- Right: LCP Optimized Image Column -->
-                    <div
-                        class="lg:col-span-7 hidden sm:flex justify-end lg:justify-end items-end relative mt-8 lg:mt-0 pb-0">
-                        <!-- Creative Background Decorator -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-tr from-bg-slate-200 to-transparent rounded-3xl -rotate-3 scale-95 pointer-events-none select-none border border-accent/20">
-                        </div>
-                        <div
-                            class="absolute -bottom-4 -left-4 w-24 h-24 bg-slate-200/30 rounded-full blur-2xl pointer-events-none">
-                        </div>
-
-                        <!-- Image with dimensions and LCP optimization -->
-                        <img src="assets/images/banner/banner-img.webp"
+                    <!-- Middle: Student cutout image (Desktop only, hidden on tablet and mobile) -->
+                    <div class="hidden lg:flex items-end justify-center lg:col-span-4 relative pb-0 select-none pointer-events-none">
+                        <img src="assets/images/banner/main-img.webp"
                             alt="Swami Vivekananda Group of Institutes successful graduates"
-                            class="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[710px] relative z-10 transition-transform duration-500 block -mb-px"
-                            width="500" height="520" fetchpriority="high" decoding="async">
+                            class="w-full object-contain relative z-10 transition-transform duration-500 block -mb-px"
+                            fetchpriority="high" decoding="async">
+                    </div>
+
+                    <!-- Right: Form Column -->
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4 hidden lg:flex flex-col justify-center items-center lg:items-end pb-8 md:pb-12 lg:pb-16">
+                        <div class="bg-white border border-secondary/10 rounded-2xl p-6 sm:p-7 shadow-xl w-full relative z-20 overflow-hidden">
+                            <!-- Form Header -->
+                            <div class="text-center mb-5">
+                               <h3 class="text-xl font-bold text-secondary mt-2">Admissions Open 2026</h3>
+                            </div>
+                            
+                            <!-- Form -->
+                            <form id="hero-inquiry-form" class="space-y-4" action="send-mailAdmissionsOpen.php" method="POST">
+                                  <input type="hidden" name="form_type" value="hero">
+                                <!-- Name -->
+                                <div class="flex flex-col gap-1">
+                                    <input type="text"  name="form_name" id="hero-name" placeholder="Name" 
+                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white transition-all text-sm">
+                                </div>
+                                
+                                <!-- Phone -->
+                                <div class="flex bg-gray-50 border border-gray-200 rounded-xl overflow-hidden focus-within:border-primary focus-within:bg-white transition-all">
+                                        <span class="inline-flex flex-shrink-0 items-center px-3 text-xs text-gray-500 bg-gray-100 border-r border-gray-200 select-none">
+                                            🇮🇳 +91
+                                        </span>
+                                        <input type="tel" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" pattern=".{10,10}" autocomplete="off" 
+                                        name="form_phone" id="hero-phone" placeholder="Phone"  title="Please enter a valid 10-digit mobile number"
+                                            class="w-full px-3 py-3 bg-transparent text-black placeholder-gray-400 focus:outline-none text-sm">
+                                    </div>
+                                
+                                <!-- Course Select -->
+                                <div class="relative">
+                                    <select id="hero-course"  name="form_course" 
+                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black appearance-none focus:outline-none focus:border-primary focus:bg-white transition-all text-sm pr-10 cursor-pointer">
+                                        <option value="" disabled selected class="text-gray-400">Choose course</option>
+                                        <option value="CSE" class="text-gray-800">Computer Science & Eng. (CSE)</option>
+                                        <option value="AIDS" class="text-gray-800">AI & Data Science (AIDS)</option>
+                                        <option value="ECE" class="text-gray-800">Electronics & Comm. (ECE)</option>
+                                        <option value="EEE" class="text-gray-800">Electrical & Electronics (EEE)</option>
+                                        <option value="ME" class="text-gray-800">Mechanical Engineering (ME)</option>
+                                        <option value="CE" class="text-gray-800">Civil Engineering (CE)</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-500">
+                                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                         </svg>
+                                     </div>
+                                 </div>
+                                 
+                                 <!-- WBJEE Score (Optional) -->
+                                 <div class="flex flex-col gap-1">
+                                     <input type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off" id="hero-wbjee"  name="form_wbjee" placeholder="WBJEE Score"
+                                         class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white transition-all text-sm">
+                                 </div>
+                                 
+                                <div class="p-3 bg-gray-50 border border-gray-200 rounded-xl flex items-center justify-between">
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6Ld_jUstAAAAAIXMk3_OaheCw-yXtIIeKGHHkPOL">
+                                    </div>
+                                </div>
+                                
+                                <!-- Terms & Conditions Checkbox -->
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" id="hero-terms"  checked
+                                        class="mt-1 w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary cursor-pointer">
+                                    <label for="hero-terms" class="text-[11px] text-gray-500 leading-snug cursor-pointer select-none">
+                                        I agree to receive information about submitted enquiry.
+                                    </label>
+                                </div>
+                                
+                                <!-- Submit Button -->
+                                <div>
+                                    <button type="submit" 
+                                        class="w-full bg-primary hover:bg-primaryDark disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold px-6 py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm select-none cursor-pointer flex items-center justify-center gap-2">
+                                        <span>APPLY NOW</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
@@ -307,15 +296,24 @@ session_start();
         <section id="about" class="py-12 lg:py-16 overflow-hidden bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
 
                     <!-- Left Column: Image & Quote -->
-                    <div class="relative w-full z-10">
+                    <div class="relative w-full z-10 group cursor-pointer" id="play-video-trigger">
 
                         <!-- Main Image -->
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                        <img src="assets/images/why-imgg.jpg"
                             alt="Engineering Students at SVIST"
-                            class="w-full aspect-square object-cover rounded-3xl shadow-customCard">
+                            class="w-full aspect-square object-cover rounded-3xl shadow-customCard group-hover:brightness-95 transition-all duration-300">
+
+                        <!-- Play Button Overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-primary/95 text-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300 relative">
+                                <!-- Pulsing Ring -->
+                                <span class="absolute inset-0 rounded-full bg-primary/50 animate-ping opacity-75"></span>
+                                <i class="ri-play-fill text-4xl relative ml-1"></i>
+                            </div>
+                        </div>
 
                         <!-- Floating Quote Box -->
                         <div
@@ -335,21 +333,14 @@ session_start();
 
                     <!-- Right Column -->
                     <div class="flex flex-col mt-12 lg:mt-0 z-10">
-
                         <!-- Heading -->
                         <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-secondary !leading-snug mb-4">
-                            Why Choose
-                            <span class="text-primary">SVIST</span>
-                            For Your Engineering Journey?
+                            Why choose <span class="text-primary">SVIST</span>?
                         </h2>
 
                         <!-- Description -->
                         <p class="text-gray-600 mb-6 leading-relaxed text-base">
-                            Join an AICTE-approved and NAAC B++ accredited institution
-                            committed to academic excellence, industry-focused learning,
-                            and career growth. At SVIST, students gain practical knowledge,
-                            modern technical skills, and the confidence to succeed in today's
-                            competitive engineering landscape.
+                            Join an AICTE-approved, NAAC B++ accredited institution where engineering education is measured by outcomes, not just promises. At SVIST, students gain the practical skills, industry exposure, and placement support that turn a B.Tech degree into a real career.
                         </p>
 
                         <!-- Features -->
@@ -363,13 +354,11 @@ session_start();
 
                                 <div>
                                     <h4 class="text-base sm:text-lg font-bold text-secondary mb-2">
-                                        AICTE Approved & NAAC B++ Accredited
+                                        18 Years of Engineering Legacy
                                     </h4>
 
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        Study in a recognized institution that maintains
-                                        high academic standards and delivers quality
-                                        engineering education.
+                                        Nearly two decades of producing industry-ready engineers, in a nationally recognized institution that maintains high academic standards and industry-focused, hands-on learning.
                                     </p>
                                 </div>
                             </div>
@@ -386,14 +375,12 @@ session_start();
                                     </h4>
 
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        Gain practical exposure through projects,
-                                        workshops, technical events, internships,
-                                        and real-world engineering applications.
+                                        Gain practical exposure through projects, workshops, technical events, internships, and real-world engineering applications.
                                     </p>
                                 </div>
                             </div>
 
-                            <!-- Feature 4 -->
+                            <!-- Feature 3 -->
                             <div class="flex items-start gap-0 sm:gap-4">
                                 <span class="text-primary font-bold text-xl min-w-[40px]">
                                     03.
@@ -401,13 +388,11 @@ session_start();
 
                                 <div>
                                     <h4 class="text-base sm:text-lg font-bold text-secondary mb-2">
-                                        Career & Placement Support
+                                        Proven Placement Record
                                     </h4>
 
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        Benefit from career guidance, aptitude training,
-                                        interview preparation, and placement assistance
-                                        to help launch your professional journey.
+                                        Secure your B.Tech Admission 2026 and get 100% placement support. With top recruiters visiting campus, embedded aptitude training, and expert interview prep, we don't just teach engineering—we make sure you get hired.
                                     </p>
                                 </div>
                             </div>
@@ -436,86 +421,178 @@ session_start();
             </div>
         </section>
 
-        <!-- Horizontal Inquiry Form Section -->
-        <section class="bg-primary text-white py-12 relative overflow-hidden"
-            style="content-visibility: auto; contain-intrinsic-size: auto 200px;">
-            <!-- Background glow accent -->
-            <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none">
+        <!-- Company Logo Marquee Section -->
+        <section class="bg-gray-50 py-8 border-y border-gray-100 overflow-hidden">
+            <style>
+                @keyframes marquee {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee-scroll {
+                    display: flex;
+                    width: max-content;
+                    animation: marquee 25s linear infinite;
+                }
+                .animate-marquee-scroll:hover {
+                    animation-play-state: paused;
+                }
+            </style>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 mb-10 text-center">
+                <span class="inline-flex items-center px-4 py-2 rounded-full bg-accentLight text-primary text-xs sm:text-sm font-semibold mb-4">
+                    Top Recruiters
+                </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary leading-tight mt-2">
+                    Our Graduates Work At <span class="text-primary">Leading Companies</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+                    SVIST students secure excellent placement opportunities with top-tier global recruiters and major technology consulting firms.
+                </p>
             </div>
+            
+            <div class="relative w-full overflow-hidden flex">
+                <div class="animate-marquee-scroll flex items-center gap-12 py-4">
+                    <!-- Logos Group 1 -->
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/tcs.webp" alt="TCS Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/cognizent.webp" alt="Cognizant Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/wipro.webp" alt="Wipro Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/infosys.webp" alt="Infosys Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/ibm.webp" alt="IBM Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/accenture.webp" alt="Accenture Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/capgemini.webp" alt="Capgemini Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/tech-mahindra.webp" alt="Tech Mahindra Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/amazon.webp" alt="Amazon Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/blue-star.webp" alt="Blue Star Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/daikin.webp" alt="Daikin Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/genpact.webp" alt="Genpact Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/itc.webp" alt="ITC Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/pinnacle.webp" alt="Pinnacle Logo" class="w-full h-full object-contain">
+                    </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-                <!-- Left: Text Header -->
-                <div class="text-center mb-10">
-                    <h2 class="text-2xl font-bold text-white tracking-tight">Apply for B.Tech Admission 2026</h2>
-                    <p class="text-accentLight/80 text-sm mt-2">Enter your details below to get immediate expert
-                        counselling and verify course availability.</p>
+                    <!-- Logos Group 2 (Duplicate for loop) -->
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/tcs.webp" alt="TCS Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/cognizent.webp" alt="Cognizant Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/wipro.webp" alt="Wipro Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/infosys.webp" alt="Infosys Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/ibm.webp" alt="IBM Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/accenture.webp" alt="Accenture Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/capgemini.webp" alt="Capgemini Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/tech-mahindra.webp" alt="Tech Mahindra Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/amazon.webp" alt="Amazon Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/blue-star.webp" alt="Blue Star Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/daikin.webp" alt="Daikin Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/genpact.webp" alt="Genpact Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/itc.webp" alt="ITC Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-40 h-16 flex items-center justify-center">
+                        <img src="assets/images/company-logo/pinnacle.webp" alt="Pinnacle Logo" class="w-full h-full object-contain">
+                    </div>
                 </div>
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                
+                <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10"></div>
+            </div>
+        </section>
+        
+        
+        
+         <!-- Placement Statistics Section -->
+        <section class="bg-warm-bg py-16 border-b border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-accentLight text-primary text-sm font-semibold">
+                        Placement Highlights
+                    </span>
+                    <h2 class="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary leading-tight">
+                        Record of <span class="text-primary">Successful Career Starts</span>
+                    </h2>
+                    <p class="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                        SVIST graduates consistently secure excellent career starts with packages and offers that reflect the high standards of our training.
+                    </p>
+                </div>
 
-
-
-                    <!-- Right: Form 1 -->
-                    <form id="horizontal-inquiry-form" class="flex-grow" action="send-mail.php" method="POST">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
-                            <input type="hidden" name="form_type" value="enquiry">
-                            <!-- Name Input -->
-                            <div class="flex flex-col gap-1.5">
-                                <label for="form-name" class="text-xs font-semibold text-accentLight">Full Name</label>
-                                <input type="text" id="form-name" name="form_name" placeholder="Enter your name"
-                                    class="w-full px-4 py-3 bg-white/80 border border-white/20 rounded-xl text-black placeholder-black/60 focus:outline-none focus:border-white transition-all text-sm">
-                            </div>
-
-                            <!-- Phone Input -->
-                            <div class="flex flex-col gap-1.5">
-                                <label for="form-phone" class="text-xs font-semibold text-accentLight">Phone
-                                    Number</label>
-                                <input type="tel" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" pattern=".{10,10}" autocomplete="off" id="form-phone" name="form_phone" placeholder="Enter phone number"
-                                    class="w-full px-4 py-3 bg-white/80 border border-white/20 rounded-xl text-black placeholder-black/60 focus:outline-none focus:border-white transition-all text-sm">
-                            </div>
-
-                            <!-- Course Select -->
-                            <div class="flex flex-col gap-1.5">
-                                <label for="form-course" class="text-xs font-semibold text-accentLight">Preferred
-                                    Course</label>
-                                <div class="relative">
-                                    <select id="form-course" name="form_course"
-                                        class="w-full px-4 py-3 bg-white/80 border border-white/20 rounded-xl text-black appearance-none focus:outline-none focus:border-white transition-all text-sm pr-10 cursor-pointer">
-                                        <option value="" disabled selected class="text-gray-800">Select Department
-                                        </option>
-                                        <option value="CSE" class="text-gray-800">Computer Science & Eng. (CSE)</option>
-                                        <option value="AIDS" class="text-gray-800">AI & Data Science (AIDS)</option>
-                                        <option value="ECE" class="text-gray-800">Electronics & Comm. (ECE)</option>
-                                        <option value="EEE" class="text-gray-800">Electrical & Electronics (EEE)
-                                        </option>
-                                        <option value="ME" class="text-gray-800">Mechanical Engineering (ME)</option>
-                                        <option value="CE" class="text-gray-800">Civil Engineering (CE)</option>
-                                    </select>
-                                    <div
-                                        class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-black/70">
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <div>
-                                <button type="submit"
-                                    class="w-full bg-[#DFBE88] hover:bg-[#d7b271] text-black font-bold px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-sm select-none cursor-pointer flex items-center justify-center gap-2">
-                                    <span>Enquire Now</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                    </svg>
-                                </button>
-                            </div>
-
-                        </div>
-                    </form>
-
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Stat Card 1 -->
+                    <div class="stat-card active bg-white p-8 rounded-2xl border border-accent-light shadow-sm cursor-pointer">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary stat-card-line z-10"></div>
+                        <div class="text-3xl sm:text-4xl font-semibold text-primary mb-3 stat-value">₹ 11 LPA</div>
+                        <h4 class="text-lg font-bold text-secondary mb-2">Highest Package</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Achieved by SVIST students in campus placements.</p>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="stat-card bg-white p-8 rounded-2xl border border-accent-light shadow-sm cursor-pointer">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary stat-card-line z-10"></div>
+                        <div class="text-3xl sm:text-4xl font-semibold text-primary mb-3 stat-value">₹ 3.6 LPA</div>
+                        <h4 class="text-lg font-bold text-secondary mb-2">Average Package</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Consistent average package across all engineering branches.</p>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="stat-card bg-white p-8 rounded-2xl border border-accent-light shadow-sm cursor-pointer">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary stat-card-line z-10"></div>
+                        <div class="text-3xl sm:text-4xl font-semibold text-primary mb-3 stat-value">3000+</div>
+                        <h4 class="text-lg font-bold text-secondary mb-2">Job Offers</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">From world's most prestigious organisations</p>
+                    </div>
+                    <!-- Stat Card 4 -->
+                    <div class="stat-card bg-white p-8 rounded-2xl border border-accent-light shadow-sm cursor-pointer">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary stat-card-line z-10"></div>
+                        <div class="text-3xl sm:text-4xl font-semibold text-primary mb-3 stat-value">600+</div>
+                        <h4 class="text-lg font-bold text-secondary mb-2">Multiple Offers</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Students holding more than one offer letter</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -548,7 +625,7 @@ session_start();
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:hidden gap-6">
 
                     <!-- CSE -->
-                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10"
+                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10 open-modal-btn"
                         style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop');">
                         <div class="absolute inset-0 bg-[#2d1b15]/60"></div>
                         <div class="relative z-10">
@@ -557,15 +634,15 @@ session_start();
                                 Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Learn software development,
                                 programming, cloud computing, databases, and emerging technologies.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry" data-course="CSE"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- AI & DS -->
-                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10"
+                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10 open-modal-btn"
                         style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop');">
                         <div class="absolute inset-0 bg-[#2d1b15]/60"></div>
                         <div class="relative z-10">
@@ -574,15 +651,15 @@ session_start();
                                 Intelligence & Data Science</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Explore machine learning,
                                 data analytics, artificial intelligence, and intelligent systems.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry" data-course="AIDS"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- ECE -->
-                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10"
+                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10 open-modal-btn"
                         style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop');">
                         <div class="absolute inset-0 bg-[#2d1b15]/60"></div>
                         <div class="relative z-10">
@@ -591,15 +668,15 @@ session_start();
                                 Communication Eng.</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Study communication systems,
                                 embedded technologies, electronics, and networking.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry"  data-course="ECE"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- EEE -->
-                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10"
+                    <div class="relative rounded-2xl overflow-hidden shadow-customCard bg-cover bg-center min-h-[320px] flex flex-col justify-end p-6 border border-secondary/10 open-modal-btn"
                         style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=800&auto=format&fit=crop');">
                         <div class="absolute inset-0 bg-[#2d1b15]/60"></div>
                         <div class="relative z-10">
@@ -608,8 +685,8 @@ session_start();
                                 Electronics Eng.</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Build expertise in
                                 electrical systems, power engineering, automation, and electronics.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry" data-course="EEE"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -623,8 +700,8 @@ session_start();
                             <span class="text-white/60 font-serif text-3xl mb-1 block">05</span>
                             <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">Mechanical Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Learn about mechanics, thermodynamics, robotics, and structural design.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry"  data-course="ME"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -638,8 +715,8 @@ session_start();
                             <span class="text-white/60 font-serif text-3xl mb-1 block">06</span>
                             <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight">Civil Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed drop-shadow-md">Master the design, construction, and maintenance of the physical and naturally built environment.</p>
-                            <a href="#courses"
-                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2">
+                            <a href="#enquiry"  data-course="CE"
+                                class="mt-4 text-accentLight font-semibold text-xs  flex items-center gap-2 open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -670,8 +747,8 @@ session_start();
                                 Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Learn software
                                 development, programming, cloud computing, databases, and emerging technologies.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="CSE"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -696,8 +773,8 @@ session_start();
                                 Data Science</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Explore
                                 machine learning, data analytics, artificial intelligence, and intelligent systems.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="AIDS"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -722,8 +799,8 @@ session_start();
                                 Eng.</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Study
                                 communication systems, embedded technologies, electronics, and networking.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="ECE"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -748,8 +825,8 @@ session_start();
                                 Eng.</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Build
                                 expertise in electrical systems, power engineering, automation, and electronics.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="EEE"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -771,8 +848,8 @@ session_start();
                             <span class="text-white/50 font-serif text-3xl mb-2">05</span>
                             <h3 class="text-3xl font-bold text-white mb-3 leading-tight">Mechanical<br>Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Learn about mechanics, thermodynamics, robotics, and structural design.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="ME"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -794,8 +871,8 @@ session_start();
                             <span class="text-white/50 font-serif text-3xl mb-2">06</span>
                             <h3 class="text-3xl font-bold text-white mb-3 leading-tight">Civil<br>Engineering</h3>
                             <p class="text-white/90 text-sm leading-relaxed mb-6 max-w-sm drop-shadow-md">Master the design, construction, and maintenance of the physical and naturally built environment.</p>
-                            <a href="#courses"
-                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max">
+                            <a href="#enquiry"  data-course="CE"
+                                class="text-accentLight font-semibold text-xs uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2 w-max open-modal-btn">
                                 View Programs <i class="ri-arrow-right-long-line"></i>
                             </a>
                         </div>
@@ -807,7 +884,7 @@ session_start();
                 <div class="text-center mt-12">
                     <a href="#enquiry"
                         class="inline-flex items-center justify-center gap-3 bg-primary hover:bg-primaryDark text-white px-8 py-3.5 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 open-modal-btn w-full sm:w-auto">
-                        Apply For Admission
+                        Know the Fee Structure
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -817,16 +894,6 @@ session_start();
 
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
 
         <!-- Campus Facilities Section -->
         <section id="facilities" class="pb-12 md:pb-16 bg-white relative">
@@ -952,16 +1019,17 @@ session_start();
                         <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Start Your Journey</h3>
                         <p class="text-white/90 text-sm leading-relaxed mb-8 relative z-10 px-2">Join our vibrant campus
                             and shape your engineering career with world-class facilities.</p>
-                        <a href="#enquiry"
+                        <a href="assets/images/Success-Stories.pdf" target="_blank"
                             class="inline-flex bg-white text-primary font-bold px-8 py-3.5 rounded-xl hover:bg-accentLight transition-colors w-full justify-center relative z-10 shadow-md">
-                            Apply Now
+                            See Placement Record
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonial Section -->
+        
+          <!-- Testimonial Section -->
         <section class="py-12 md:py-16 text-white relative overflow-hidden
     bg-[linear-gradient(rgba(140,68,38,0.9),rgba(140,68,38,0.9)),url('assets/images/banner/svimcs-building.webp')]
     bg-cover bg-center">>
@@ -995,53 +1063,60 @@ session_start();
                 class="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl translate-x-1/3 translate-y-1/3">
             </div>
 
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white text-xs sm:text-sm font-semibold mb-4">
+                        Student Testimonials
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight drop-shadow-sm">
+                        What Our <span class="text-accent-light font-extrabold">Students Say</span>
+                    </h2>
+                </div>
 
                 <!-- Slider Container -->
                 <div class="testi-slider outline-none cursor-grab active:cursor-grabbing">
 
                     <!-- Slide 1 -->
-                    <div class="testi-item outline-none px-4" data-type="students">
-                        <i class="ri-double-quotes-l text-6xl text-white/20 mb-6 inline-block"></i>
-                        <h2
-                            class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold leading-relaxed mb-6 md:mb-10 drop-shadow-sm">
-                            "SVIST provided me with the perfect blend of theoretical knowledge and practical exposure.
-                            The state-of-the-art facilities shaped my engineering career."
-                        </h2>
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-xl font-bold tracking-wide">Rahul Sharma</span>
-                            <span class="text-white/80 text-sm mt-1 font-semibold">B.Tech, CSE
-                                Alumni</span>
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/NONtwqkkehI" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="testi-item outline-none px-4" data-type="students">
-                        <i class="ri-double-quotes-l text-6xl text-white/20 mb-6 inline-block"></i>
-                        <h2
-                            class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold leading-relaxed mb-6 md:mb-10 drop-shadow-sm">
-                            "The modern labs and interactive smart classrooms make learning complex engineering concepts
-                            incredibly engaging. I feel completely prepared for the industry."
-                        </h2>
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-xl font-bold tracking-wide">Priya Das</span>
-                            <span class="text-white/80 text-sm mt-1 font-semibold">B.Tech, ECE
-                                (3rd Year)</span>
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/wY6K21tIqT8" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="testi-item outline-none px-4" data-type="students">
-                        <i class="ri-double-quotes-l text-6xl text-white/20 mb-6 inline-block"></i>
-                        <h2
-                            class="text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold leading-relaxed mb-6 md:mb-10 drop-shadow-sm">
-                            "Our faculty goes above and beyond to support us. The focus on practical projects and
-                            real-world applications has truly transformed my college experience."
-                        </h2>
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-xl font-bold tracking-wide">Aman Verma</span>
-                            <span class="text-white/80 text-sm mt-1 font-semibold">B.Tech,
-                                Mechanical Alumni</span>
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/dcXlaVGpzdE" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/hUsTOPP5hyU" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/mbTRCWDGMZU" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="testi-item outline-none px-3">
+                        <div class="bg-black/20 p-2 rounded-2xl border border-white/10 backdrop-blur-sm overflow-hidden">
+                            <iframe class="w-full rounded-xl" style="aspect-ratio: 9/16;" src="https://www.youtube.com/embed/hKq21zBAFUA" title="Student Testimonial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
 
@@ -1394,7 +1469,11 @@ session_start();
                         </div>
                     </div>
                 </div>
-
+                <div class="flex flex-col gap-1.5">
+                <label for="modal-wbjee" class="text-xs font-semibold text-secondary/85">WBJEE Score</label>
+                <input type="text" id="hero-wbjee" name="form_wbjee" placeholder="WBJEE Score" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="10" autocomplete="off"
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-black placeholder-gray-400 focus:outline-none focus:border-primary focus:bg-white transition-all text-sm">
+                </div>
                 <!-- Submit Button -->
                 <div class="pt-2">
                     <button type="submit"
@@ -1409,9 +1488,14 @@ session_start();
             </form>
         </div>
     </div>
+     <!-- Floating WhatsApp Desktop -->
+    <a href="https://wa.me/917003029267" target="_blank" aria-label="WhatsApp" class="hidden lg:flex fixed bottom-6 right-6 items-center justify-center hover:scale-110 transition-transform z-50">
+        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="w-[60px] h-[60px] drop-shadow-xl">
+    </a>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Interactive UI Handler Script -->
+<!-- Interactive UI Handler Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Mobile Drawer Menu Logic ---
@@ -1521,7 +1605,34 @@ session_start();
                 }
             });
 
-            bindFormSubmit();
+           
+
+            // --- Hero Form Logic ---
+            const heroForm = document.getElementById('hero-inquiry-form');
+            if (heroForm) {
+                const captchaCheckbox = document.getElementById('hero-captcha');
+                const captchaSpinner = document.getElementById('captcha-spinner');
+                const captchaCheck = document.getElementById('captcha-check');
+                const submitBtn = document.getElementById('hero-submit-btn');
+
+                // reCAPTCHA interaction
+                captchaCheckbox.addEventListener('change', () => {
+                    if (captchaCheckbox.checked) {
+                        // Hide checkbox visual & show spinner
+                        captchaCheckbox.classList.add('opacity-0', 'pointer-events-none');
+                        captchaSpinner.classList.remove('hidden');
+
+                        setTimeout(() => {
+                            // Hide spinner & show green checkmark
+                            captchaSpinner.classList.add('hidden');
+                            captchaCheck.classList.remove('hidden');
+                            
+                            // Enable submit button
+                            submitBtn.disabled = false;
+                        }, 1000);
+                    }
+                });
+            }
         });
     </script>
 
@@ -1530,22 +1641,63 @@ session_start();
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
             <!-- Bottom Copyright -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-white/80 text-sm text-center md:text-left">
+            <p class="text-white/80 text-sm text-center">
                     &copy; 2026 Swami Vivekananda Group of Institutes (SVIST). All Rights Reserved.
                 </p>
-                <div class="flex gap-4 text-sm text-white/80">
-                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
-                </div>
-            </div>
         </div>
     </footer>
 
     <script type="text/javascript" src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="assets/libs/slick/slick.min.js"></script>
+      <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 hidden opacity-0 transition-opacity duration-300">
+        <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300">
+            <!-- Close Button -->
+            <button id="close-video-modal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-colors cursor-pointer">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+            <!-- Iframe Container -->
+            <div class="aspect-video w-full">
+                <iframe id="modal-video-iframe" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
+            // Video Modal Functionality
+            const $videoModal = $('#video-modal');
+            const $playTrigger = $('#play-video-trigger');
+            const $closeVideoBtn = $('#close-video-modal');
+            const $videoIframe = $('#modal-video-iframe');
+            const videoUrl = "https://www.youtube.com/embed/fNm6GjvPKgM?autoplay=1";
+            if ($playTrigger.length && $videoModal.length) {
+                $playTrigger.on('click', function () {
+                    $videoIframe.attr('src', videoUrl);
+                    $videoModal.removeClass('hidden');
+                    setTimeout(() => {
+                        $videoModal.removeClass('opacity-0').addClass('opacity-100');
+                        $videoModal.find('.max-w-4xl').removeClass('scale-95').addClass('scale-100');
+                    }, 50);
+                });
+                const closeVideoModal = function () {
+                    $videoModal.removeClass('opacity-100').addClass('opacity-0');
+                    $videoModal.find('.max-w-4xl').removeClass('scale-100').addClass('scale-95');
+                    setTimeout(() => {
+                        $videoModal.addClass('hidden');
+                        $videoIframe.attr('src', '');
+                    }, 300);
+                };
+                $closeVideoBtn.on('click', closeVideoModal);
+                $videoModal.on('click', function (e) {
+                    if (e.target === this) {
+                        closeVideoModal();
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
             $('.testi-slider').slick({
                 dots: false,
                 arrows: true,
@@ -1553,60 +1705,27 @@ session_start();
                 nextArrow: $('.testi-next'),
                 infinite: true,
                 speed: 600,
-                slidesToShow: 1,
+                slidesToShow: 3,
                 slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 5000,
-
-                pauseOnHover: true
+                autoplay: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 640,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         });
-    </script>
-
-    <script>
-        document.getElementById("horizontal-inquiry-form").addEventListener("submit", function(e) {
-
-            let name = document.getElementById("form-name").value.trim();
-            let phone = document.getElementById("form-phone").value.trim();
-            let course = document.getElementById("form-course").value;
-
-            if (name == "") {
-                e.preventDefault();
-                toastr.error("Please enter your full name.");
-                return;
-            }
-
-            if (!/^[A-Za-z ]+$/.test(name)) {
-                e.preventDefault();
-                toastr.error("Name should contain only letters.");
-                return;
-            }
-
-            if (phone == "") {
-                e.preventDefault();
-                toastr.error("Please enter your phone number.");
-                return;
-            }
-
-            if (!/^[6-9][0-9]{9}$/.test(phone)) {
-                e.preventDefault();
-                toastr.error("Please enter a valid 10-digit mobile number.");
-                return;
-            }
-
-            if (course == "") {
-                e.preventDefault();
-                toastr.error("Please select a preferred course.");
-                return;
-            }
-
-        });
-    </script>
-    <script>
-        if (localStorage.getItem("success")) {
-            toastr.success(localStorage.getItem("success"));
-            localStorage.removeItem("success");
-        }
     </script>
     <script>
         $(document).ready(function () {
@@ -1624,7 +1743,7 @@ session_start();
                 let phone = $("#modal-phone").val().trim();
                 let email = $("#modal-email").val().trim();
                 let course = $("#modal-course").val();
-        
+
                 // Name
                 if (name === "") {
                     $("#modal-name").removeClass("border-gray-200").addClass("border-red-500");
@@ -1679,7 +1798,7 @@ session_start();
                     $("#modal-course").focus();
                     return;
                 }
-        
+                
                 // Submit if all validations pass
                 this.submit();
         
@@ -1691,6 +1810,80 @@ session_start();
             });
         
             $("#modal-course").on("change", function () {
+                $(this).removeClass("border-red-500").addClass("border-gray-200");
+            });
+        
+        });
+    </script>
+    
+    <!--Hero setion form-->
+    
+    <script>
+        $(document).ready(function () {
+
+            $("#hero-inquiry-form").on("submit", function (e) {
+        
+                e.preventDefault();
+        
+                $("#hero-name,#hero-phone,#hero-course,#hero-wbjee")
+                    .removeClass("border-red-500")
+                    .addClass("border-gray-200");
+        
+                let name = $("#hero-name").val().trim();
+                let phone = $("#hero-phone").val().trim();
+                let course = $("#hero-course").val();
+
+                if (name === "") {
+                    $("#hero-name").addClass("border-red-500").focus();
+                    toastr.error("Please enter your full name.");
+                    return;
+                }
+        
+                if (!/^[A-Za-z ]+$/.test(name)) {
+                    $("#hero-name").addClass("border-red-500").focus();
+                    toastr.error("Name should contain only letters.");
+                    return;
+                }
+        
+                if (phone === "") {
+                    $("#hero-phone").addClass("border-red-500").focus();
+                    toastr.error("Please enter your phone number.");
+                    return;
+                }
+        
+                if (!/^[6-9][0-9]{9}$/.test(phone)) {
+                    $("#hero-phone").addClass("border-red-500").focus();
+                    toastr.error("Please enter a valid 10 digit mobile number.");
+                    return;
+                }
+        
+                if (!course) {
+                    $("#hero-course").addClass("border-red-500").focus();
+                    toastr.error("Please select your preferred course.");
+                    return;
+                }
+        
+        
+                let recaptcha = grecaptcha.getResponse();
+
+                if (recaptcha.length === 0) {
+                    toastr.error("Please complete the Google reCAPTCHA.");
+                    return;
+                }
+        
+                if (!$("#hero-terms").is(":checked")) {
+                    toastr.error("Please accept the Terms & Conditions.");
+                    return;
+                }
+        
+                this.submit();
+            });
+        
+            $("#hero-name,#hero-phone,#hero-wbjee").on("input", function () {
+                $(this).removeClass("border-red-500").addClass("border-gray-200");
+            });
+        
+            $("#hero-course").on("change", function () {
                 $(this).removeClass("border-red-500").addClass("border-gray-200");
             });
         
@@ -1718,6 +1911,22 @@ session_start();
     <?php unset($_SESSION['success']); } ?>
     
     });
+    
+    $(document).ready(function () {
+
+    $(".open-modal-btn").on("click", function () {
+
+        let course = $(this).data("course");
+
+        // Open modal
+        $("#applicationModal").removeClass("hidden").addClass("flex");
+
+        // Select course automatically
+        $("#modal-course").val(course).trigger("change");
+
+    });
+
+});
     </script>
     
 </body>
